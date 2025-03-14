@@ -226,12 +226,12 @@ proc sort data=fef2575;
 by sex f agebound;
 run;
 
-proc sort data=reflib.verticle_lookup_table2_2022;
+proc sort data=reflib.verticle_lookup_table2;
 by sex f agebound;
 run;
 
 data tempfef2575;
-merge fef2575 reflib.verticle_lookup_table2_2022;
+merge fef2575 reflib.verticle_lookup_table2;
 by sex f agebound;
 if id ne .;
 run;
@@ -273,12 +273,12 @@ proc sort data=fef75;
 by sex f agebound;
 run;
 
-proc sort data=reflib.verticle_lookup_table2_2022;
+proc sort data=reflib.verticle_lookup_table2;
 by sex f agebound;
 run;
 
 data tempfef75;
-merge fef75 reflib.verticle_lookup_table2_2022;
+merge fef75 reflib.verticle_lookup_table2;
 by sex f agebound;
 if id ne .;
 run;
